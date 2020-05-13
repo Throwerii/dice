@@ -11,8 +11,14 @@ rollButton.addEventListener("click", function() {
     let numRand=Math.floor(Math.random() * 7)
     let count=0
     while(count<result){
-        console.log(numRand)
-        
+        dieRoll.push(numRand)
+        console.log(dieRoll)
+        var sum=dieRoll.reduce(function(a,b){
+            return a+b
+        },0)
+        console.log(sum)
+            rollSum.innerHTML=sum; 
         count+=1
     }
+    
 })
