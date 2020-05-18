@@ -3,6 +3,8 @@ let rollButton = document.querySelector("#roll")
 let diceroll = document.querySelector("#diceroll")
 let showAllButton = document.querySelector("#all")
 let rollSum = document.querySelector("#rollsum")
+let listAll = document.querySelector("#allroll")
+
 
 rollButton.addEventListener("click", function() {
    const result=diceroll.value
@@ -20,5 +22,20 @@ rollButton.addEventListener("click", function() {
             rollSum.innerHTML=sum; 
         count+=1
     }
-    
-})
+    })
+showAllButton.addEventListener("click", function() {
+   const result=diceroll.value
+    console.log(result)
+    console.log("All button clicked")
+    let count=0
+    let i=0
+    while(count<result){
+        var list=dieRoll[i]
+        const newDiceString = '<li class="allroll">' + list + "</li>";
+        listAll.innerHTML += newDiceString;
+        console.log(dieRoll)
+        i+=1
+        count+=1
+
+    }
+    })
