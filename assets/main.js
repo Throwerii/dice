@@ -4,6 +4,7 @@ let diceroll = document.querySelector("#diceroll")
 let showAllButton = document.querySelector("#all")
 let rollSum = document.querySelector("#rollsum")
 let listAll = document.querySelector("#allroll")
+let resetButton = document.querySelector("#reset")
 
 
 rollButton.addEventListener("click", function() {
@@ -38,4 +39,11 @@ showAllButton.addEventListener("click", function() {
         count+=1
 
     }
+    })
+resetButton.addEventListener("click", function() {
+    rollSum.innerHTML=0; 
+    listAll.innerHTML=" ";
+    diceroll.value=" ";
+    console.log("RESET!! button clicked")
+    
     })
