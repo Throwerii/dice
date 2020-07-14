@@ -11,9 +11,9 @@ rollButton.addEventListener("click", function() {
    const result=diceroll.value
     console.log(result)
     console.log("Roll button clicked")
-    let numRand=Math.floor(Math.random() * 7)
     let count=0
     while(count<result){
+        let numRand=Math.floor(Math.random() * 7)
         dieRoll.push(numRand)
         console.log(dieRoll)
         var sum=dieRoll.reduce(function(a,b){
@@ -44,6 +44,8 @@ resetButton.addEventListener("click", function() {
     rollSum.innerHTML=0; 
     listAll.innerHTML=" ";
     diceroll.value=" ";
+    dieRoll=[]
     console.log("RESET!! button clicked")
+    console.log(diceroll.value)
     
     })
